@@ -527,15 +527,15 @@
 						]
 					},
 					{
-     id : 'txtTitle',
+     id : 'txtCredit',
      type : 'text',
-     label : editor.lang.link.advisoryTitle,
+     label : 'Image Credit',
      'default' : '',
      setup : function( type, element )
      {
      	if ( type == IMAGE )
      	{
-     		this.setValue( element.getAttribute( 'title' ) );
+     		this.setValue( element.getAttribute( 'data-image-credit' ) );
      	}
      },
      commit : function( type, element )
@@ -544,7 +544,7 @@
      	{
      		if ( this.getValue() || this.isChanged() )
      		{
-     			element.setAttribute( 'title', this.getValue() );
+     			element.setAttribute( 'data-image-credit', this.getValue() );
      		}
      	}
      }
