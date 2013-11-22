@@ -527,51 +527,28 @@
 						]
 					},
 					{
-     id : 'txtCredit',
-     type : 'text',
-     label : 'Image Credit',
-     'default' : '',
-     setup : function( type, element )
-     {
-     	if ( type == IMAGE )
-     	{
-     		this.setValue( element.getAttribute( 'data-image-credit' ) );
-     	}
-     },
-     commit : function( type, element )
-     {
-     	if ( type == IMAGE )
-     	{
-     		if ( this.getValue() || this.isChanged() )
-     		{
-     			element.setAttribute( 'data-image-credit', this.getValue() );
-     		}
-     	}
-     }
-     },
-     {
-     id : 'txtRel',
-     type : 'text',
-     label : editor.lang.link.rel,
-     'default' : '',
-     setup : function( type, element )
-     {
-     	if ( type == IMAGE )
-     	{
-     		this.setValue( element.getAttribute( 'rel' ) );
-     	}
-     },
-     commit : function( type, element )
-     {
-     	if ( type == IMAGE )
-     	{
-     		if ( this.getValue() || this.isChanged() )
-     		{
-     			element.setAttribute( 'rel', this.getValue() );
-     		}
-     	}
-     }
-     },
+					     id : 'txtCredit',
+					     type : 'text',
+					     label : 'Image Credit',
+					     'default' : '',
+					     setup : function( type, element )
+					     {
+					     	if ( type == IMAGE )
+					     	{
+					     		this.setValue( element.getAttribute( 'data-image-credit' ) );
+					     	}
+					     },
+					     commit : function( type, element )
+					     {
+					     	if ( type == IMAGE )
+					     	{
+					     		if ( this.getValue() || this.isChanged() )
+					     		{
+					     			element.setAttribute( 'data-image-credit', this.getValue() );
+					     		}
+					     	}
+					     }
+					     },
 						{
 						id: 'txtAlt',
 						type: 'text',
