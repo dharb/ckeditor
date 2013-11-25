@@ -529,7 +529,7 @@
 					{
 					     id : 'txtCredit',
 					     type : 'text',
-					     label : 'Image Credit',
+					     label : 'Credit',
 					     'default' : '',
 					     onChange: function() {
 							updatePreview( this.getDialog() );
