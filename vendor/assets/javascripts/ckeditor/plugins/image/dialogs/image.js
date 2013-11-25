@@ -531,11 +531,14 @@
 					     type : 'text',
 					     label : 'Image Credit',
 					     'default' : '',
+					     onChange: function() {
+							updatePreview( this.getDialog() );
+						},
 					     setup : function( type, element )
 					     {
 					     	if ( type == IMAGE )
 					     	{
-					     		this.setValue( element.getAttribute( 'data-image-credit' ) );
+					     		this.setValue( element.getAttribute( 'title' ) );
 					     	}
 					     },
 					     commit : function( type, element )
@@ -544,7 +547,7 @@
 					     	{
 					     		if ( this.getValue() || this.isChanged() )
 					     		{
-					     			element.setAttribute( 'data-image-credit', this.getValue() );
+					     			element.setAttribute( 'title', this.getValue() );
 					     		}
 					     	}
 					     }
